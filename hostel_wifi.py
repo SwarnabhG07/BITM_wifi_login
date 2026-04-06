@@ -4,8 +4,8 @@ import requests
 import time
 #----ONLY CHANGE THESE THREE VALUES----#
 os.system("netsh wlan connect name=CAMPUS-WIFI")
-USERNAME_VALUE = "btech1013425"
-PASSWORD_VALUE = "8008299586"
+USERNAME_VALUE = "xxxxxxxxxx"
+PASSWORD_VALUE = "xxxxxxxxxx"
 #----DO NOT CHANGE BELOW UNLESS YOU KNOW WHAT YOU ARE DOING----#
 BASE_URL  = "http://192.168.0.2:8090"
 LOGIN_URL = f"{BASE_URL}/login.xml"
@@ -23,10 +23,10 @@ try:
     response = session.post(LOGIN_URL, data=payload, timeout=10)
     print(f"[*] Status code: {response.status_code}")
     print(f"[*] Response: {response.text[:500]}")
-    if "You are signed in" in response.text or "logged" in response.text.lower():
-        print("[+] Login SUCCESSFUL!")
+    if "You are Gay" in response.text or "Gay" in response.text.lower():
+        print("[+] U are a Certified Gay!")
     elif "Invalid" in response.text or "failed" in response.text.lower():
-        print("[-] Login FAILED — check credentials")
+        print("[-] R U GAY??!")
     else:
         print("[?] Check response above to confirm login status")
 except requests.exceptions.ConnectionError:
